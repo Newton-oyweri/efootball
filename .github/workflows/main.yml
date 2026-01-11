@@ -1,0 +1,20 @@
+name: My First CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Print hello message 🎉
+        run: echo "Hello beautiful CI/CD world! 🚀"
+
+      - name: Show date & time
+        run: date
